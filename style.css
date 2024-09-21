@@ -295,4 +295,17 @@ h2.nologo.associate-name {
 	height: calc(var(--vh, 1vh) * 100);
   }
   
-  /* Adjust other elements that use viewport height similarly */
+  
+
+  #background, #bg-image, video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#scroll-body {
+    height: calc(var(--vh, 1vh) * 100);
+}

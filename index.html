@@ -602,22 +602,48 @@ $(document).ready(function() {
     var winW, winH, bodyH, roadW;
 
 	function setVH() {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    
+    // Update video height
+    const video = document.querySelector('video');
+    const bgImage = document.getElementById('bg-image');
+    const background = document.getElementById('background');
+    
+    if (video) video.style.height = `${window.innerHeight}px`;
+    if (bgImage) bgImage.style.height = `${window.innerHeight}px`;
+    if (background) background.style.height = `${window.innerHeight}px`;
 }
 
-// Set the value on initial load
-setVH();
+// Call setVH on load, resize, orientationchange, and scroll
+window.addEventListener('load', setVH);
+window.addEventListener('resize', setVH);
+window.addEventListener('orientationchange', setVH);
+window.addEventListener('scroll', setVH);
 
-// Update the value on resize
-window.addEventListener('resize', () => {
-  setVH();
-});
+// Debounce function to limit how often setVH is called
+function debounce(func, wait = 20, immediate = true) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
 
-// Update the value on orientation change
-window.addEventListener('orientationchange', () => {
-  setVH();
-});
+// Use debounced version for scroll and resize
+const debouncedSetVH = debounce(setVH);
+window.addEventListener('scroll', debouncedSetVH);
+window.addEventListener('resize', debouncedSetVH);
+
+
+
 
 function sizing() {
     winW = win.width();
@@ -629,18 +655,22 @@ function sizing() {
     var motoH = $('#moto').height();
     var maxRoadH = Math.min(motoH * 0.5, winH * 0.3); // Limit road height on small screens
 
+
+// Set the value on initial load
+setVH();
+
     $('#road').css('height', maxRoadH);
     $('#bottom').css('height', maxRoadH + titleH);
     $('#line').css('height', maxRoadH - 8);
     $('#signs').css('bottom', maxRoadH + titleH);
 
-    var vidH = Math.max(winH - (maxRoadH + titleH), winW * 0.4245);
-    $('#bg-image').css('height', vidH);
-    $('video').css({
-        'height': vidH,
-        'object-fit': 'cover'
-    });
 }
+
+// Call sizing on load, resize, orientationchange, and scroll
+window.addEventListener('load', sizing);
+window.addEventListener('resize', sizing);
+window.addEventListener('orientationchange', sizing);
+window.addEventListener('scroll', sizing);
 
 win.on('scroll resize', sizing);
 let lastWidth = window.innerWidth;
