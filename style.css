@@ -1,0 +1,285 @@
+/*
+Black Road Styles
+*/
+
+.archivo-black-regular {
+	font-family: "Archivo Black", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+
+body {
+	background-color: #000;
+	width: 100%;
+	height: 14000px;
+}
+a {text-decoration: ; color: #222;}
+a:visited {color: #222;}
+a:hover {color: #000;}
+div, body, html {padding: 0; margin: 0; font-family: 'Helvetica Neue', helvetica;}
+#scroll-body {
+	position: relative;
+	height: 100%;
+}
+/*Background video, image and audio*/
+#background {
+	background-size: cover;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	opacity: .9;
+}
+#bg-image {
+	background: url('images/waves.jpg') no-repeat;
+	background-size: cover;
+	position: fixed;
+	width: 100%;
+}
+video {
+	position: fixed; 
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+	filter: FlipH;
+}
+#video-overlay {
+	background: url('images/noise.png') repeat;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	opacity: 0.4;
+}
+audio {display:none;}
+#controls {position: fixed; top: 4px; left: 5px; width: 30px; cursor: pointer;z-index: 999;}
+#controls div {position: fixed; top: 4px; left: 5px;}
+#play img, #pause img {border-radius: 5px;}
+#pause {display: none;}	
+div#askew {
+	color: #FFF;
+	left: 38px;
+	top: 12px;
+	font-size: 11px;
+}
+
+/* Videos & Images */
+#ks-video {
+	position: fixed;
+	top: 70px;
+	right: -1800px;
+	z-index: 99999;
+}
+
+/* Road */
+#road {
+	position: absolute; 
+	top: 0;
+	background: url('images/side.jpg') repeat;
+}
+#line {
+	background: url('images/asphalt.jpg') repeat;
+	width: 100%;
+	white-space: nowrap;
+	opacity: .9;
+	position: relative;
+	top: 4px;
+	padding: 0 0;
+	overflow: hidden;
+}
+#lines-wrapper {
+	position: relative; 
+	left: 0;
+	top: 35%;
+}
+.lines {
+	display: inline-block;
+	background: url('images/stripe.png') repeat-x 50%;
+	padding: 6px 25px 8px;
+	position: relative;
+	left: 0;
+	margin-right: 30px;
+	text-align: center;
+	color: #000;
+	font-size: 16px;
+	text-shadow: 1px 0px 1px #52471A;
+	letter-spacing: 1px;
+}
+.noname {width: 120px; color: #000;}
+.thanks {width: auto; padding: 3px 20px 6px 70px;}
+.arrow {
+	font-size: 180%;
+	position: relative;
+	top: 5px;
+	padding-left: 10px;
+	line-height: 12px;
+}
+
+#signs, #lines-wrapper, #moto, #ks-video {
+    will-change: transform;
+}
+/* motorcycle */
+#moto {
+	position: absolute;
+	width: 350px;
+	bottom: 4px;
+	z-index: 99;
+}
+#moto img {width: 100%; margin-left: -280px;}
+/*Signs*/
+#signs {
+	position: fixed;
+	bottom: 45%;
+	height: 255px;
+	white-space: nowrap;
+	z-index: 9999;
+}
+.sign-wrapper {
+	width: 308px;
+	height: 100%;
+	position: relative;
+	display: inline-block;
+	margin-right: 1500px;
+}
+.sign-wrapper div {position: absolute;}
+.sign {width: 100%; height: 100%; background-color: green; margin-left: 50%;
+	text-align: center;
+	white-space:  normal;
+	background: url('images/billboard.png') no-repeat;
+}
+h1, h2 {color: #000; margin: 0;}
+h1 {border-bottom: 0px solid #DDD; font-size: 13.5px; height: 15px; padding: 6px 5px 7px; text-transform: uppercase;}
+h2 {font-size: 18px; position: absolute;padding: 30px 80px 15px;}
+.end h2 {padding: 20px 80px 15px;}
+h2.nologo {position: static; height: 80px; }
+h2.logo {position: static; height: 80px; padding-top: 0;}
+.sign img {width: 120px; position: relative; padding: 0;}
+.sign.drinki img {width: 95px; padding: 0 0 1px 12px;}
+
+.sign.brammo img {
+	width: 210px;
+	padding: 20px 0 35px;
+}
+.sign.sop img {
+	width: 210px;
+	padding: 10px 5px 12px;
+	left: 2px;
+	background: #FFF;
+}
+.sign.malmberg img {
+	width: 160px;
+	padding: 2px 31px;
+	background: #FFF;
+	left: 2px;
+	top: -1px;
+}
+.malmberg h2.nologo {
+	margin-top: -5px;
+	height: auto;
+	padding: 0;
+}
+.sign.emotion img {
+	width: 200px;
+	padding: 15px 15px 22px 17px;
+	background: black;
+}
+.sign.rita img {
+	width: 205px;
+	padding: 28px 8px 30px 10px;
+	background: white;
+	left: 1px;
+}
+.sign.coop img {
+	width: 158px;
+	padding: 1px 36px 1px 30px;
+	background: white;
+	left: 2px;
+}
+.sign.ahn img {
+	width: 215px;
+	position: relative;
+	padding: 5px 4px 8px;
+	background-color: white;
+	left: 2px;
+}
+h2.nologo.associate {
+	padding: 30px 0 0;
+	font-size: 16px;
+	height: auto;
+}
+h2.nologo.associate-name {
+	padding: 0;
+}
+/* Black Road Title */
+#title-wrapper {
+	position: fixed;
+	bottom: 0;
+    color: #FFF94F;
+	width: 100%;
+	line-height: 0.85em;
+	text-align: center;
+    background: url('images/asphalt.jpg') repeat;
+	letter-spacing: .14em;
+/*    padding-bottom: .06em*/;
+}
+#title {opacity: 0.5;font-family: 'Archivo Black', sans-serif;}
+
+#bottom {
+	background: url('images/asphalt.jpg') repeat;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 99999;
+}
+#video-overlay {
+	background: url('images/noise.png') repeat;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	opacity: 0.4;
+}
+
+#kickstarter {position: fixed; top: 4px; right: 5px;}
+#kickstarter img {width: 33px;border-radius: 10px;}
+
+/*MOBILE */
+
+@media screen and (max-width: 768px) {
+
+    #moto img {
+        height: 250px; /* Adjust as needed */
+        width: auto;
+    }
+/*
+    #controls {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    #controls img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #askew {
+        font-size: 10px;
+    }
+
+    .sign h1 {
+        font-size: 14px;
+    }
+
+    .sign h2 {
+        font-size: 12px;
+    }
+
+    #lines-wrapper .lines {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+*/
+	}
+
+/*TESTING */
+

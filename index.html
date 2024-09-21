@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Road Movie</title>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<link rel="stylesheet" href="style.css" media="screen" title="no title">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="scroll-body">
+
+<div id="background">
+	<div id="bg-image"></div>
+	<video width="100%" loop autoplay muted>
+		<source src="media/waves_slow_matted.ogg" type="video/ogg">
+		<source src="media/waves_slow_matted.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+</div>
+<audio id="player" loop>
+  <source src="media/blackroad.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<div id="controls">
+	<div id="play"><img src="images/play.png" alt="Play"></div>
+	<div id="pause"><img src="images/pause.png" alt="Pause"></div>
+	<div id="askew">Black Road score by John Morgan Askew</div>
+</div>
+
+<div id="signs">
+	<div class="sign-wrapper first">
+		<div class="sign">
+			<h1>This mile sponsored by</h1>
+			<h2 class="nologo">Scroll down to begin...</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>These 5 miles sponsored by</h1>
+			<h2 class="nologo">CO-PRODUCER Luis Rodriguez</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign brammo">
+			<h1>This mile sponsored by</h1>
+			<a href="http://brammo.com/" title="Brammo" target="_blank"><img src="images/logos/brammo.png" alt="Brammo"></a>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign drinki">
+			<h1>This mile sponsored by</h1>
+			<a href="http://drinkiwiki.com/" title="DrinkiWiki" target="_blank"><img src="images/logos/drinkiwiki.png" alt="DrinkiWiki"></a>
+			<h2 class="logo">Drinkiwiki</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>These 5 miles sponsored by</h1>
+			<h2 class="nologo">CO-PRODUCER Troy Hemmerling</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign sop">
+			<h1>This mile sponsored by</h1>
+			<a href="http://www.soperio.com/" title="Southern Oregon Periodontics" target="_blank"><img src="images/logos/sop-logo.jpg" alt="Southern Oregon Periodontics"></a>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>This mile sponsored by</h1>
+			<h2 class="nologo">Donny Closson</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign malmberg">
+			<h1>These 2 miles sponsored by</h1>
+			<h2 class="nologo">ASSOCIATE PRODUCER</h2>
+			<img src="images/logos/malmberg.jpg" alt="Malmberg">
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>These 2 miles sponsored by</h1>
+			<h2 class="nologo associate">ASSOCIATE PRODUCER</h2>
+			<h2 class="nologo associate-name">Jack Montague</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>These 3 miles sponsored by</h1>
+			<h2 class="nologo associate">ASSOCIATE PRODUCER</h2>
+			<h2 class="nologo associate-name">Catherine Lassesen</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign emotion">
+			<h1>This mile sponsored by</h1>
+			<a href="http://emotionstudios.com/" title="eMotion Studios" target="_blank"><img src="images/logos/emotion.jpg" alt="eMotion Studios"></a>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>This mile sponsored by</h1>
+			<h2 class="nologo">Lee Fuchsmann</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>These 2 miles sponsored by</h1>
+			<h2 class="nologo associate">ASSOCIATE PRODUCER</h2>
+			<h2 class="nologo associate-name">Henry Bataille</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>These 5 miles sponsored by</h1>
+			<h2 class="nologo associate">CO-PRODUCER</h2>
+			<h2 class="nologo associate-name">Amy Van Nostrand</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign rita">
+			<h1>This mile sponsored by</h1>
+			<a href="https://ritap.myrandf.com/" target="_blank"><img src="images/logos/rita.jpg" alt="Rita Piziali - Rodan + Fields Dermatologists"></a>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>These 3 miles sponsored by</h1>
+			<h2 class="nologo associate">ASSOCIATE PRODUCER</h2>
+			<h2 class="nologo associate-name">Geoff Whitman</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>These 3 miles sponsored by</h1>
+			<h2 class="nologo">Tim Daly</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign coop">
+			<h1>This mile sponsored by</h1>
+			<a href="http://www.ashlandfood.coop" target="_blank"><img src="images/logos/afc.jpg" alt="Ashland Food Co-op"></a>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>These 2 miles sponsored by</h1>
+			<h2 class="nologo associate">ASSOCIATE PRODUCER</h2>
+			<h2 class="nologo associate-name">Robert MacLellan</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>This mile sponsored by</h1>
+			<h2 class="nologo">Sandra Bilson</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>This mile sponsored by</h1>
+			<h2 class="nologo">Jeff Veatch</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>This mile sponsored by</h1>
+			<h2 class="nologo">Jimmy Kolker</h2>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign ahn">
+			<h1>This mile sponsored by</h1>
+			<a href="http://www.ashlandhome.net" target="_blank"><img src="images/logos/ahn.jpg" alt="Ashland Home Net"></a>
+		</div>
+	</div>
+
+	<div class="sign-wrapper">
+		<div class="sign">
+			<h1>This mile sponsored by</h1>
+			<h2 class="nologo">Your name or logo here</h2>
+		</div>
+	</div>
+
+</div>
+<div id="bottom">
+	<div id="title-wrapper"><div id="title">BLACK ROAD</div></div>
+	<div id="road">
+		<div id="moto"><img src="images/bikewithrider.png" alt="Motorcycle rider"></div>
+		<div id="line">
+			<div id="lines-wrapper">
+				<div class="lines thanks">Thank you to our friends, fans, and community for their support! <span class="arrow">&#8674;</span></div>
+				<div class="lines">Marc Wells</div>
+				<div class="lines">Alex Williams</div>
+				<div class="lines">Kent Romney</div>
+				<div class="lines">Jason R. Couch</div>
+				<div class="lines">Hillary Demmon</div>
+				<div class="lines">Mo Sultan</div>
+				<div class="lines">Robert A Cole</div>
+				<div class="lines">Jeb Livingston</div>
+				<div class="lines">Lisa Byrne</div>
+				<div class="lines"><a href="http://www.madbirdesign.com" target="_blank">Mad Bird Design</a></div>
+				<div class="lines">Luis Rodriguez</div>
+				<div class="lines">Reid Buker</div>
+				<div class="lines">Jamie McGinley</div>
+				<div class="lines">Jared Krelic</div>
+				<div class="lines">Tieg Zaharia</div>
+				<div class="lines">Drinkiwiki</div>
+				<div class="lines">Jessica &amp; Ryan Malmberg</div>
+				<div class="lines">Dan Lundgren</div>
+				<div class="lines">Sunny Lundgren</div>
+				<div class="lines">Kendall Ruth</div>
+				<div class="lines">Stephan Boutenko</div>
+				<div class="lines">Ronny M Huffstutter</div>
+				<div class="lines">Troy Hemmerling</div>
+				<div class="lines">Veryl Ann Grace</div>
+				<div class="lines">Jeanine Castaldo</div>
+				<div class="lines">Alan Stuart</div>
+				<div class="lines">The Garrottos</div>
+				<div class="lines">Darcy Danielson</div>
+				<div class="lines">Tess Hemmerling</div>
+				<div class="lines">The Bucks</div>
+				<div class="lines">Doreen Aarhaus O'Skea</div>
+				<div class="lines"><a href="https://www.facebook.com/8dollarmountain" target="_blank">Eight Dollar Mountain</a></div>
+				<div class="lines">Craig Sailor</div>
+				<div class="lines">Marissa Bataille</div>
+				<div class="lines"><a href="http://www.soperio.com" target="_blank">CH Chou, Southern Oregon Periodontics</div>
+				<div class="lines">Brett Warnock</div>
+				<div class="lines noname">Graham Lewis</div>
+				<div class="lines">Chris Cook</div>
+				<div class="lines"><a href="http://xrats.net" target="_blank">Ross Williams, XRATS Productions</a></div>
+				<div class="lines">Laura Vogel</div>
+				<div class="lines">Lily Yee</div>
+				<div class="lines">Sarah</div>
+				<div class="lines">Neil Wilson</div>
+				<div class="lines">Benjamin Meader</div>
+				<div class="lines">Donny Closson</div>
+				<div class="lines">Robert Head</div>
+				<div class="lines">Nicholas Kleinhaus</div>
+				<div class="lines">Brett Eichenberger</div>
+				<div class="lines">Susan Haley</div>
+				<div class="lines">Iris Goldie</div>
+				<div class="lines">Lou White</div>
+				<div class="lines">Jason Black</div>
+				<div class="lines">Niya C Sisk</div>
+				<div class="lines">Wright Sullivan</div>
+				<div class="lines">Betsy</div>
+				<div class="lines">Ashley Wilson</div>
+				<div class="lines">Allan Oliver</div>
+				<div class="lines">Eric Trautwein</div>
+				<div class="lines">Bruce Wilson</div>
+				<div class="lines">Sangye Ince-Johannsen</div>
+				<div class="lines">Lindsey Wilson</div>
+				<div class="lines">Wendy Temple</div>
+				<div class="lines">Heather Costes</div>
+				<div class="lines">Barret &amp; Erica O'Brien</div>
+				<div class="lines">Dee Anne Everson</div>
+				<div class="lines">Bill Rowe</div>
+				<div class="lines">Antonia Sassin</div>
+				<div class="lines">Karen Carnival</div>
+				<div class="lines">Rob Wagner</div>
+				<div class="lines">Greg Sorenson</div>
+				<div class="lines">Gina Espinoza</div>
+				<div class="lines">Eve Smyth</div>
+				<div class="lines">John</div>
+				<div class="lines">Barrie Eskridge</div>
+				<div class="lines">Andrew Rudd</div>
+				<div class="lines">Don Kitzman</div>
+				<div class="lines">Bob &amp; Susie Marshall</div>
+				<div class="lines">Dave Marshall</div>
+				<div class="lines">Chris Moore</div>
+				<div class="lines">Vincent Cenni</div>
+				<div class="lines">Rocky &amp; Izzy</div>
+				<div class="lines">Patrick Neary</div>
+				<div class="lines">Chelsea Sheffey</div>
+				<div class="lines">Marilynn Gordon</div>
+				<div class="lines">Matthew Doell</div>
+				<div class="lines">Chris Sorenson</div>
+				<div class="lines">Diane Pomeroy</div>
+				<div class="lines">Robin MacRae</div>
+				<div class="lines">Zr Sherman</div>
+				<div class="lines">Candice Kimberling Tarr</div>
+				<div class="lines">Ryan Malmberg</div>
+				<div class="lines">Michelle Lombardo</div>
+				<div class="lines">Stacy Grimes</div>
+				<div class="lines">Joel Glovier</div>
+				<div class="lines">Cathy Meriam</div>
+				<div class="lines">Chico</div>
+				<div class="lines">Katherine Glanville</div>
+				<div class="lines">Norm Malmberg</div>
+				<div class="lines">Jim Sachs</div>
+				<div class="lines">Susan Elhardt</div>
+				<div class="lines">Lee Fuchsmann</div>
+				<div class="lines">Ric &amp; Laura Komarek</div>
+				<div class="lines">Jack Montague</div>
+				<div class="lines">Heather Lloyd</div>
+				<div class="lines">Keith &amp; Kimberly</div>
+				<div class="lines">Robert Deeble</div>
+				<div class="lines">Matt Francis</div>
+				<div class="lines">Jeffrey Star</div>
+				<div class="lines">Mig Windows</div>
+				<div class="lines">Catherine E. Coulson</div>
+				<div class="lines">Eion McReady</div>
+				<div class="lines">Levi Anderson</div>
+				<div class="lines">Rick Viczorek</div>
+				<div class="lines">Alexander Pawlowski</div>
+				<div class="lines">Amber Zollitsch</div>
+				<div class="lines">Priscilla Glovier</div>
+				<div class="lines">Katherine Gosnell</div>
+				<div class="lines">Josefina Urena</div>
+				<div class="lines">Sharon Rook</div>
+				<div class="lines">John Lamy</div>
+				<div class="lines">Sonja Nootebos</div>
+				<div class="lines">Mark Reinfeld</div>
+				<div class="lines">Rich Rees</div>
+				<div class="lines">Bernie Worrell Orchestra</div>
+				<div class="lines">Michael Marshall</div>
+				<div class="lines">Boaz</div>
+				<div class="lines">Revek</div>
+				<div class="lines">Frederick Lawrence Greene</div>
+				<div class="lines">Sean Doherty</div>
+				<div class="lines">Vince Di Meglio</div>
+				<div class="lines">Lori Harms</div>
+				<div class="lines">David Gordon</div>
+				<div class="lines"><a href="http://ashlandwebsites.com" target="_blank">Ashland Websites</a></div>
+				<div class="lines">Cathy Rose</div>
+				<div class="lines">Chelsea Lundgren</div>
+				<div class="lines">Tyler Maddox</div>
+				<div class="lines"><a href="http://maddoxvisual.com" target="_blank">Maddox Visual</a></div>
+				<div class="lines">Caleb Skinner</div>
+				<div class="lines">Sarah Stein</div>
+				<div class="lines">Heidi Helfand</div>
+				<div class="lines">Jill Sachs</div>
+				<div class="lines">Jeri Karcey</div>
+				<div class="lines">Karen Wallace Fox</div>
+				<div class="lines">Carrie Kuba</div>
+				<div class="lines">Catherine Lassesen</div>
+				<div class="lines">Susan Saladoff</div>
+				<div class="lines">Courtney Williams</div>
+				<div class="lines">Gary Kout</div>
+				<div class="lines">Jack Vitacco</div>
+				<div class="lines">Jon Karcey</div>
+				<div class="lines">Anne Ashbey</div>
+				<div class="lines">John Marshall</div>
+				<div class="lines">Oliver Fix</div>
+				<div class="lines">Gilda Montenegro-Fix</div>
+				<div class="lines">Heather Stafford</div>
+				<div class="lines">Susan Marshall</div>
+				<div class="lines">Kimberly Quan</div>
+				<div class="lines">Brandon Givens</div>
+				<div class="lines">Joe Angio</div>
+				<div class="lines">Sean Marshall</div>
+				<div class="lines">John Morgan Askew</div>
+				<div class="lines">Joel Lesko</div>
+				<div class="lines">Brad Walker</div>
+				<div class="lines">Lola Egan</div>
+				<div class="lines">Chris Keene</div>
+				<div class="lines">Denny Rutledge</div>
+				<div class="lines">Craig &amp; Jennifer Bramscher</div>
+				<div class="lines">Cedar Miller</div>
+				<div class="lines"><a href="http://emotionstudios.com" target="_blank">eMotion Studios</a></div>
+				<div class="lines">Warren Etheridge</div>
+				<div class="lines">Nada Acevedo</div>
+				<div class="lines">Michelle Foster</div>
+				<div class="lines">Amanda</div>
+				<div class="lines">Daniel Lazoff</div>
+				<div class="lines">Robert Jones</div>
+				<div class="lines">Tyrel Stumpff</div>
+				<div class="lines">Dayvin Turchiano</div>
+				<div class="lines">Randy Granstrom</div>
+				<div class="lines">Ryan Graham</div>
+				<div class="lines">Mark Goldblatt</div>
+				<div class="lines">David Stevens</div>
+				<div class="lines">Doug Rowe</div>
+				<div class="lines">Mo Soar</div>
+				<div class="lines">Rose Vance</div>
+				<div class="lines">Franci</div>
+				<div class="lines">Adam Markle</div>
+				<div class="lines">Logan Wilkin</div>
+				<div class="lines">Mark Friedman</div>
+				<div class="lines">Merydydd Roberts</div>
+				<div class="lines">Vicki Biscay</div>
+				<div class="lines">Scott Christopherson</div>
+				<div class="lines">Dee Fretwell</div>
+				<div class="lines"><a href="https://www.youtube.com/channel/UCzm-X2hIj4aZfZYmureauig" target="_blank">Hollywood Breakthrough with Danielle Tillis</a></div>
+				<div class="lines">Doug Fergus</div>
+				<div class="lines">Paul Schaffer</div>
+				<div class="lines">Robert Fort</div>
+				<div class="lines">David Hill</div>
+				<div class="lines">Mark Arinsberg</div>
+				<div class="lines">Darian Slywka</div>
+				<div class="lines">Jimmy Leavens</div>
+				<div class="lines">Tracy Heiden</div>
+				<div class="lines">C.E. Hayes</div>
+				<div class="lines"><a href="http://www.chopchopproductions.com/" target="_blank">Brooke DeBoer / Chop Chop Productions</a></div>
+				<div class="lines">Annie Jacob</div>
+				<div class="lines">Michael Tully</div>
+				<div class="lines">Leann Hertel</div>
+				<div class="lines">Greg Baldwin</div>
+				<div class="lines">Jeff Mark</div>
+				<div class="lines">Megan Snow</div>
+				<div class="lines">Mike Estes</div>
+				<div class="lines">Polly Ligon O'Grady</div>
+				<div class="lines">Jim Uhls</div>
+				<div class="lines">Jonathan Peterson</div>
+				<div class="lines">Rik Burns</div>
+				<div class="lines">Christina McConathy</div>
+				<div class="lines">Henry Bataille</div>
+				<div class="lines">Rick Lundgren</div>
+				<div class="lines">Amy Van Nostrand</div>
+				<div class="lines">Adam M. Weg</div>
+				<div class="lines">Michael Paul Caruso</div>
+				<div class="lines">Theresa Arndt</div>
+				<div class="lines">Kathryne Dora Brown</div>
+				<div class="lines">Casey Bonsi</div>
+				<div class="lines">Brent Streeper</div>
+				<div class="lines">Cynthia Salbato</div>
+				<div class="lines"><a href="https://ritap.myrandf.com/" target="_blank">Rita Piziali - Rodan + Fields Dermatologists</a></div>
+				<div class="lines">Kent &amp; Christine Malmberg</div>
+				<div class="lines">Michelle &amp; Mike Erwin</div>
+				<div class="lines">David Yager</div>
+				<div class="lines">Amy Kasallis</div>
+				<div class="lines">Mark &amp; Kim Lackey</div>
+				<div class="lines">Parker Mills</div>
+				<div class="lines">Allison &amp; Rogier Goedecke</div>
+				<div class="lines">Tara Johnson-Medinger</div>
+				<div class="lines">Twanissa Cox</div>
+				<div class="lines">Colin Vanderhoff</div>
+				<div class="lines">T.J. Martin</div>
+				<div class="lines">James Hukill</div>
+				<div class="lines">Christine Menefee</div>
+				<div class="lines">Jack Gibbs</div>
+				<div class="lines">Eric Warren</div>
+				<div class="lines">Ken Shirtcliff</div>
+				<div class="lines">Joseph Palombizio</div>
+				<div class="lines">Carlton Patterson</div>
+				<div class="lines">Shannon Fitts</div>
+				<div class="lines">The Bowen Family</div>
+				<div class="lines">James Dillon</div>
+				<div class="lines">Christine Vaughn</div>
+				<div class="lines">Vico Images</div>
+				<div class="lines">Matt &amp; Kirsten Mills</div>
+				<div class="lines">John Lamar</div>
+				<div class="lines">Judy Palmer</div>
+				<div class="lines">Geoff Whitman</div>
+				<div class="lines">Meghan Theiss</div>
+				<div class="lines">Carol Sbarge</div>
+				<div class="lines">Debbie Preston</div>
+				<div class="lines">Jody Waters</div>
+				<div class="lines">Tara Duncil</div>
+				<div class="lines">Stephen Ballentine</div>
+				<div class="lines">Audrey Cleary Mills</div>
+				<div class="lines">Fedra Yazdi</div>
+				<div class="lines">Jamie Brush</div>
+				<div class="lines">Sami P. Scripter</div>
+				<div class="lines">Ashland Food Co-op</div>
+				<div class="lines">Annie Hoy</div>
+				<div class="lines">Michael Smith</div>
+				<div class="lines">Christie Sarles</div>
+				<div class="lines">Judy Plapinger</div>
+				<div class="lines">Judy Clarke Watson Engstrom</div>
+				<div class="lines">Tyler James Myers</div>
+				<div class="lines">Hillary Meinheit</div>
+				<div class="lines">Robert McLellan</div>
+				<div class="lines">Lauren Henry</div>
+				<div class="lines">Beth Crookham</div>
+				<div class="lines">Michael Paul Bryant</div>
+				<div class="lines">Eva Lynn Robinson</div>
+				<div class="lines">Ed Francis</div>
+				<div class="lines">Pegeen Valentine</div>
+				<div class="lines">Michele Carnes Ellis</div>
+				<div class="lines">Pamela Favro</div>
+				<div class="lines">Susannah Young</div>
+				<div class="lines">Carolina Prihar</div>
+				<div class="lines">Jasmine Karcey</div>
+				<div class="lines">Robert Adam</div>
+				<div class="lines">Joseph Linaschke</div>
+				<div class="lines">Michael Antonopoulos</div>
+				<div class="lines">Alisabeth Brown</div>
+				<div class="lines">Michelle Joy Lloyd</div>
+				<div class="lines">Yankton Robins</div>
+				<div class="lines">Gregory Bilson</div>
+				<div class="lines">Gabe &amp; Dana Friley</div>
+				<div class="lines">Sandra Bilson</div>
+				<div class="lines">Avo Soltes</div>
+				<div class="lines">Mike</div>
+				<div class="lines">Jenn Head</div>
+				<div class="lines">Judy Holy</div>
+				<div class="lines">Jeff Veatch</div>
+				<div class="lines">Brian Padian</div>
+				<div class="lines">Samantha E. Grafton</div>
+				<div class="lines">Jimmy Kolker</div>
+				<div class="lines"><a href="http://www.ashlandhome.net/" target="_blank">Jim Teece / Ashland Home Net</a></div>
+				<div class="lines">Kathy Neary</div>
+				<div class="lines">Joanne Barney</div>
+				<div class="lines">Paul James Martin</div>
+				<div class="lines">Chuck Chill</div>
+				<div class="lines">Sean &amp; Kerri Traynor</div>
+				<div class="lines">Andy White</div>
+				<div class="lines">Mandy Altman</div>
+				<div class="lines">Chuck Marshall</div>
+				<div class="lines">Ianquest</div>
+				<div class="lines">Paul Witten</div>
+				<div class="lines">Ray Robison</div>
+				<div class="lines">Lori Scheper-Kesel</div>
+				<div class="lines">Claudia Everett</div>
+				<div class="lines">Allison Adato</div>
+				<div class="lines">Joe Rynearson</div>
+				<div class="lines">Simone Stewart</div>
+				<div class="lines">Grace Peters</div>
+				<div class="lines">Lisa Winslow</div>
+				<div class="lines">Ethan Walker</div>
+				<div class="lines">Jennifer Van Gessel</div>
+				<div class="lines">Dennis Connors</div>
+				<div class="lines">Ben Shelton</div>
+				<div class="lines">Tom McFadden</div>
+				<div class="lines">Pineapple Steak</div>
+				<div class="lines">Wendy James</div>
+				<div class="lines">Ben Simon</div>
+				<div class="lines">Dana Greaves</div>
+				<div class="lines">John Javna</div>
+				<div class="lines">Joanne Feinberg</div>
+				<div class="lines">Steve Vincent</div>
+				<div class="lines">Taylor Ashland</div>
+				<div class="lines">Don Money</div>
+				<div class="lines">Janet Young</div>
+				<div class="lines">Bob Hinger</div>
+				<div class="lines">Elise Newman</div>
+				<div class="lines">Tom Gazaway</div>
+				<div class="lines">David Kirk West</div>
+				<div class="lines">Kristopher Ballard</div>
+				<div class="lines">Colleen Gibbs</div>
+				<div class="lines">Wendy Conner</div>
+				<div class="lines">Geoffrey Ford</div>
+				<div class="lines">Mark Gibbs</div>
+				<div class="lines">Andres Camacho-Gonzalez</div>
+				<div class="lines">Buck Klintworth</div>
+				<div class="lines">Ric Krause</div>
+				<div class="lines">Steve Kout</div>
+				<div class="lines">Kathryn Burke</div>
+				<div class="lines">Meghan Conaty</div>
+				<div class="lines">John Kayden</div>
+				<div class="lines">Steve Risk</div>
+				<div class="lines">David Raines</div>
+				<div class="lines">Robin</div>
+				<div class="lines">Marsha Darin</div>
+				<div class="lines">Lynda Do</div>
+				<div class="lines">Tony Laughlin</div>
+				<div class="lines">Steven Streeper</div>
+				<div class="lines">Liz Heckenast</div>
+				<div class="lines noname">&nbsp;</div>
+				<div class="lines noname">&nbsp;</div>
+				<div class="lines noname">&nbsp;</div>
+				
+			</div><!-- #lines-wrapper -->
+		</div><!-- #line -->
+	</div><!-- #road -->
+</div><!-- #bottom -->
+</div><!-- #scroll-body -->
+<div id="video-overlay"></div>
+<div id="kickstarter"><a href="http://kickstarter.blackroadmovie.com"><img src="images/ks.png" alt="Kickstarter"></a></div>
+
+
+<script>
+$(document).ready(function() {
+	$("#title-wrapper").fitText(0.9, {
+    minFontSize: '16px',
+    maxFontSize: '1000px' // or any maximum size you prefer
+	});
+
+    var win = $(window);
+    var winW, winH, bodyH, roadW;
+
+function sizing() {
+    winW = win.width();
+    winH = win.height();
+    bodyH = $('body').height();
+    roadW = $('#road').width();
+
+    var titleH = $('#title-wrapper').height();
+    var motoH = $('#moto').height();
+    var maxRoadH = Math.min(motoH * 0.5, winH * 0.3); // Limit road height on small screens
+
+    $('#road').css('height', maxRoadH);
+    $('#bottom').css('height', maxRoadH + titleH);
+    $('#line').css('height', maxRoadH - 8);
+    $('#signs').css('bottom', maxRoadH + titleH);
+
+    var vidH = Math.max(winH - (maxRoadH + titleH), winW * 0.4245);
+    $('#bg-image').css('height', vidH);
+    $('video').css({
+        'height': vidH,
+        'object-fit': 'cover'
+    });
+}
+
+    sizing();
+    $(window).resize(sizing);
+
+    win.scroll(function() {
+    var wPos = win.scrollTop();
+    var maxScroll = $(document).height() - win.height();
+    var scrollPercentage = wPos / maxScroll;
+    
+	// Calculate maximum horizontal movement for #moto
+	var motoMaxX = winW + $('#moto').width()-150;
+    var motoX = scrollPercentage * motoMaxX;
+
+    var newX = scrollPercentage * (roadW - winW - 50);
+
+
+    // Update positions using transform: translateX
+	$('#signs').css('transform', 'translateX(' + (-newX * 1.5) + 'px)');
+    $('#lines-wrapper').css('transform', 'translateX(' + (-newX) + 'px)');
+    $('#moto').css('transform', 'translateX(' + motoX + 'px)');
+    $('#ks-video').css('transform', 'translateX(' + (newX * 1.5 - 1800) + 'px)');
+
+
+	});
+
+	var player = document.getElementById('player');
+	player.pause();
+    player.currentTime = 0;
+
+	$('#controls').click(function() {
+        if (player.paused) {
+            player.play();
+            $('#play').hide();
+            $('#pause').show();
+        } else {
+            player.pause();
+            $('#pause').hide();
+            $('#play').show();
+        }
+    });
+
+});
+
+</script>
+</body>
+</html>
