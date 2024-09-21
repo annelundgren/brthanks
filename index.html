@@ -664,6 +664,12 @@ setVH();
     $('#line').css('height', maxRoadH - 8);
     $('#signs').css('bottom', maxRoadH + titleH);
 
+    var vidH = Math.max(winH - (maxRoadH + titleH), winW * 0.4245);
+    $('#bg-image').css('height', vidH);
+    $('video').css({
+        'height': vidH,
+        'object-fit': 'cover'
+    });
 }
 
 // Call sizing on load, resize, orientationchange, and scroll
