@@ -283,3 +283,16 @@ h2.nologo.associate-name {
 
 /*TESTING */
 
+:root {
+	--vh: 1vh;
+  }
+  
+  #scroll-body {
+	height: calc(var(--vh, 1vh) * 100);
+  }
+  
+  #background {
+	height: calc(var(--vh, 1vh) * 100);
+  }
+  
+  /* Adjust other elements that use viewport height similarly */

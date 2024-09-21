@@ -601,9 +601,27 @@ $(document).ready(function() {
     var win = $(window);
     var winW, winH, bodyH, roadW;
 
+	function setVH() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Set the value on initial load
+setVH();
+
+// Update the value on resize
+window.addEventListener('resize', () => {
+  setVH();
+});
+
+// Update the value on orientation change
+window.addEventListener('orientationchange', () => {
+  setVH();
+});
+
 function sizing() {
     winW = win.width();
-    winH = win.height();
+    winH = win.innerHeight();
     bodyH = $('body').height();
     roadW = $('#road').width();
 
@@ -623,6 +641,20 @@ function sizing() {
         'object-fit': 'cover'
     });
 }
+
+win.on('scroll resize', sizing);
+let lastWidth = window.innerWidth;
+window.addEventListener('resize', () => {
+  const newWidth = window.innerWidth;
+  const newHeight = window.innerHeight;
+  if (newWidth !== lastWidth) {
+    lastWidth = newWidth;
+  } else {
+    // Only height has changed, likely due to toolbar
+    setVH();
+    sizing();
+  }
+});
 
     sizing();
     $(window).resize(sizing);
